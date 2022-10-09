@@ -1,9 +1,12 @@
 import AuthModal from '@/modules/auth/components/AuthModal';
+import { useWeb3React } from '@web3-react/core';
 import * as React from 'react';
+import useENSName from './useENSName';
 
 export default function Header() {
   const [isAuthModalOpen, setIsAuthModalOpen] = React.useState(false);
-
+  const { active, error, activate, account, setError } = useWeb3React();
+  const ENSName = useENSName(account);
   return (
     <header className='navbar bg-base-100'>
       <div className='flex-none'>
@@ -31,7 +34,7 @@ export default function Header() {
           className='btn btn-ghost btn-square'
           onClick={() => setIsAuthModalOpen(true)}
         >
-          LOG IN
+          LOG IN - {active && account ? ENSName || account : ''}
         </button>
       </div>
       <AuthModal setIsOpen={setIsAuthModalOpen} isOpen={isAuthModalOpen} />
