@@ -48,7 +48,7 @@ export default function Trips() {
     <Layout>
       <>
         <div className='flex flex-row'>
-          <h1 className='mr-4 text-xl md:text-4xl'>My Trips</h1>
+          <h1 className='mr-4 px-4 text-xl md:text-4xl'>My Trips</h1>
           <button
             className='btn btn-primary'
             onClick={() => {
@@ -73,7 +73,7 @@ export default function Trips() {
           ? getTrips().map((item: any) => {
               return (
                 <div
-                  className='flex flex-col'
+                  className='flex flex-col px-4'
                   onClick={() => {
                     router.push(`/trips/${item.id}`);
                   }}

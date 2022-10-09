@@ -32,7 +32,7 @@ export default function AddMember({ tripId }) {
   return (
     <>
       <div className='mx-auto flex w-full flex-col' style={{ maxWidth: 400 }}>
-        <h1 className='pb-4 text-center text-3xl'>New Trip</h1>
+        <h1 className='pb-4 text-center text-3xl'>Add user wallet</h1>
         <div className='flex flex-col'>
           <label htmlFor='wallet' className='text-lg'>
             User wallet

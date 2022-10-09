@@ -36,7 +36,7 @@ export default function RequestWithdraw({ tripId }) {
   return (
     <>
       <div className='mx-auto flex w-full flex-col' style={{ maxWidth: 400 }}>
-        <h1 className='pb-4 text-center text-3xl'>New Trip</h1>
+        <h1 className='pb-4 text-center text-3xl'>New Withdraw</h1>
         <div className='flex flex-col'>
           <label htmlFor='ipfs' className='text-lg'>
             IPFS Link
